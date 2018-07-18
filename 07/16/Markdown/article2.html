@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
 <meta property="og:description" content="买了一年的阿里云ECS服务器，瞎捣鼓了一番。系统是centos 7">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-16T12:26:27.672Z">
+<meta property="og:updated_time" content="2018-07-18T13:32:50.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="试一试阿里云ECS">
 <meta name="twitter:description" content="买了一年的阿里云ECS服务器，瞎捣鼓了一番。系统是centos 7">
@@ -95,13 +95,13 @@
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><p id="top">目录</p></h2><p><a href="#base">安装一些基础软件</a><br><a href="#java">安装openjdk</a><br><a href="#mysql">安装mysql</a><br><a href="#anaconda">安装anaconda</a><br><a href="#mysql-connector-python">安装及使用mysql-connector-python</a><br><a href="#jupyter notebook">安装jupyter notebook</a></p>
 <hr>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><hr>
-<h3 id="安装一些基础软件"><a href="#安装一些基础软件" class="headerlink" title="安装一些基础软件"></a><p id="#base">安装一些基础软件</p></h3><p>yum install vim -y<br>yum install git -y<br>yum install gcc -y<br>yum install gcc-c++ -y<br>yum install zlib -y</p>
+<h3 id="安装一些基础软件"><a href="#安装一些基础软件" class="headerlink" title="安装一些基础软件"></a><p id="base">安装一些基础软件</p></h3><p>yum install vim -y<br>yum install git -y<br>yum install gcc -y<br>yum install gcc-c++ -y<br>yum install zlib -y</p>
 <hr>
 <h3 id="安装openjdk"><a href="#安装openjdk" class="headerlink" title="安装openjdk"></a><p id="java">安装openjdk</p></h3><p>首先检查是否已经安装java<br>yum list installed |grep java</p>
 <p>将java-1.8.0的所有相关程序都安装上<br>yum install java-1.8.0-openjdk* -y</p>
 <p>最后查看版本信息<br>java -version<br>javac -version</p>
 <hr>
-<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a><p id="#mysql">安装mysql</p></h3><p>官方的文档：<a href="https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="external">https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></p>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a><p id="mysql">安装mysql</p></h3><p>官方的文档：<a href="https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="external">https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></p>
 <ul>
 <li>到 <a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="external">https://dev.mysql.com/downloads/repo/yum/</a> 下载页</li>
 <li>选择要下载的版本,代替下文中的platform-and-version-specific-package-name<br>wget <a href="http://repo.mysql.com/platform-and-version-specific-package-name.noarch.rpm" target="_blank" rel="external">http://repo.mysql.com/platform-and-version-specific-package-name.noarch.rpm</a><br>例如<br>wget <a href="http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm" target="_blank" rel="external">http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm</a></li>
@@ -117,13 +117,13 @@
 <li>在阿里云的安全组开放3306端口</li>
 </ul>
 <hr>
-<h3 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a><p id="#anaconda">安装anaconda</p></h3><p>在清华大学tuna协会（tuna.moe）的开源镜像站中下载，速度较快。<br>例如，5.2.0 64位<br>wget <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh</a></p>
+<h3 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a><p id="anaconda">安装anaconda</p></h3><p>在清华大学tuna协会（tuna.moe）的开源镜像站中下载，速度较快。<br>例如，5.2.0 64位<br>wget <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh</a></p>
 <p>下载完成后，默认安装，可选择安装或不安装vscode</p>
 <hr>
-<h3 id="安装并使用mysql-connector-python"><a href="#安装并使用mysql-connector-python" class="headerlink" title="安装并使用mysql-connector-python"></a><p id="#mysql-connector-python">安装并使用mysql-connector-python</p></h3><p>pip install mysql-connector-python==8.0.11<br>安装成功后即可，下面是简单的示范代码，具体教程见mysql的官网。</p>
+<h3 id="安装并使用mysql-connector-python"><a href="#安装并使用mysql-connector-python" class="headerlink" title="安装并使用mysql-connector-python"></a><p id="mysql-connector-python">安装并使用mysql-connector-python</p></h3><p>pip install mysql-connector-python==8.0.11<br>安装成功后即可，下面是简单的示范代码，具体教程见mysql的官网。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> mysql.connector</div><div class="line"></div><div class="line">config = &#123;</div><div class="line">  <span class="string">'user'</span>: <span class="string">'scott'</span>,</div><div class="line">  <span class="string">'password'</span>: <span class="string">'password'</span>,</div><div class="line">  <span class="string">'host'</span>: <span class="string">'127.0.0.1'</span>,</div><div class="line">  <span class="string">'database'</span>: <span class="string">'employees'</span>,</div><div class="line">  <span class="string">'raise_on_warnings'</span>: <span class="keyword">True</span>,</div><div class="line">&#125;</div><div class="line"></div><div class="line">cnx = mysql.connector.connect(**config)</div><div class="line"></div><div class="line">cnx.close()</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="安装jupyter-notebook"><a href="#安装jupyter-notebook" class="headerlink" title="安装jupyter notebook"></a><p id="#jupyter notebook">安装jupyter notebook</p></h3><p>anaconda内置有jupyter notebook 所以不必再次安装</p>
+<h3 id="安装jupyter-notebook"><a href="#安装jupyter-notebook" class="headerlink" title="安装jupyter notebook"></a><p id="jupyter notebook">安装jupyter notebook</p></h3><p>anaconda内置有jupyter notebook 所以不必再次安装</p>
 <ul>
 <li><p>配置jupyter notebook</p>
 <ul>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/child/07/16/Markdown/article2.html" data-id="cjjo8m7o70001qknnd2gvqjlm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/child/07/16/Markdown/article2.html" data-id="cjjr658to0001w4nn3vfilufw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aliyun/">aliyun</a></li></ul>
