@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
 <meta property="og:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T16:13:27.098Z">
+<meta property="og:updated_time" content="2019-10-21T23:27:25.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对yilia主题的改造">
 <meta name="twitter:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
@@ -179,12 +179,12 @@
 <p>部分参考：<a href="https://www.cnblogs.com/zhangxiaochn/p/Hexo_Theme_Yilia.html" target="_blank" rel="external">https://www.cnblogs.com/zhangxiaochn/p/Hexo_Theme_Yilia.html</a></p>
 <h3 id="1-在menu中增加归档"><a href="#1-在menu中增加归档" class="headerlink" title="1. 在menu中增加归档"></a>1. 在menu中增加归档</h3><p>修改 themes/yilia/_config.yml</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">menu:</span></div><div class="line">  <span class="string">主页:</span> <span class="string">/</span></div><div class="line">  <span class="string">归档:</span> <span class="string">/archives/index.html</span></div></pre></td></tr></table></figure>
-<h3 id="2-修复失效的微信分享二维码"><a href="#2-修复失效的微信分享二维码" class="headerlink" title="2. 修复失效的微信分享二维码"></a>2. 修复失效的微信分享二维码</h3><p>在themes\yilia\layout_partial\post\share.ejs文件中</p>
+<h3 id="2-修复失效的微信分享二维码"><a href="#2-修复失效的微信分享二维码" class="headerlink" title="2. 修复失效的微信分享二维码"></a>2. 修复失效的微信分享二维码</h3><p>在themes/yilia/layout/_partial/post/share.ejs文件中</p>
 <p>把第 49 行中的</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//pan.baidu.com/share/qrcode?url=</div></pre></td></tr></table></figure>
 <p>修改为：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</div></pre></td></tr></table></figure>
-<h3 id="3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><a href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃" class="headerlink" title="3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃"></a>3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</h3><p>在 themes\yilia\source\main.0cf68a.css 文件中</p>
+<h3 id="3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><a href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃" class="headerlink" title="3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃"></a>3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</h3><p>在 themes/yilia/source/main.0cf68a.css 文件中</p>
 <ul>
 <li>修改smart-menu</li>
 </ul>
@@ -198,17 +198,18 @@
 <h3 id="4-修改头像上方颜色和wrap的渐变色"><a href="#4-修改头像上方颜色和wrap的渐变色" class="headerlink" title="4. 修改头像上方颜色和wrap的渐变色"></a>4. 修改头像上方颜色和wrap的渐变色</h3><p>修改 themes/yilia/_config.yml<br>找到样式定制并修改如下</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 样式定制 - 一般不需要修改，除非有很强的定制欲望…</span></div><div class="line"><span class="attr">style:</span></div><div class="line">  <span class="comment"># 头像上面的背景颜色</span></div><div class="line"><span class="attr">  header:</span> <span class="string">'#003153'</span></div><div class="line">  <span class="comment"># 右滑板块背景</span></div><div class="line"><span class="attr">  slider:</span> <span class="string">'linear-gradient(200deg,#feeeed,#9b95c9)'</span></div></pre></td></tr></table></figure>
 <h3 id="5-修改-aboutme-wrap-search-tag-wording-的颜色"><a href="#5-修改-aboutme-wrap-search-tag-wording-的颜色" class="headerlink" title="5. 修改 aboutme-wrap search-tag-wording 的颜色"></a>5. 修改 aboutme-wrap search-tag-wording 的颜色</h3><p>因为背景颜色较淡，把部分字体颜色加深，如侧栏标题，友链，关于我部分</p>
-<p>在 themes\yilia\source\main.0cf68a.css 文件中。</p>
+<p>在 themes/yilia/source/main.0cf68a.css 文件中。</p>
 <ul>
 <li><p>寻找search-tag-wording，设置颜色为#4d4d4d。</p>
 </li>
 <li><p>寻找aboutme-wrap，设置颜色为#4d4d4d。</p>
 </li>
 </ul>
-<p>把这一段<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.tools-col</span> <span class="selector-class">.tools-section</span> <span class="selector-class">.search-ul</span> <span class="selector-class">.search-title</span> &#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">    <span class="attribute">white-space</span>: nowrap;</div><div class="line">    <span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fffff8</span>;</div><div class="line">    <span class="attribute">text-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="built_in">rgba</span>(77,77,77,.25)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>把这一段</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.tools-col</span> <span class="selector-class">.tools-section</span> <span class="selector-class">.search-ul</span> <span class="selector-class">.search-title</span> &#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">    <span class="attribute">white-space</span>: nowrap;</div><div class="line">    <span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fffff8</span>;</div><div class="line">    <span class="attribute">text-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="built_in">rgba</span>(77,77,77,.25)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>颜色改为#4d4d4d</p>
 <h3 id="6-修改categories的路径"><a href="#6-修改categories的路径" class="headerlink" title="6. 修改categories的路径"></a>6. 修改categories的路径</h3><p>原主题中的代码有点问题，导致categories的路径结尾总是多出一个 /</p>
-<p>在D:\Blog\shilela.github.io\themes\yilia\layout_partial\post\category.ejs中，把第7行</p>
+<p>在themes/yilia/layout/_partial/post/category.ejs中，把第7行</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;/"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>改为</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -477,11 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">Test</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Test</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
