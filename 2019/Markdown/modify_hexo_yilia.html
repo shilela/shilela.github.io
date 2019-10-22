@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
 <meta property="og:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-22T14:06:03.797Z">
+<meta property="og:updated_time" content="2019-10-22T15:25:22.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对yilia主题的改造">
 <meta name="twitter:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
@@ -240,6 +240,8 @@ var _hmt = _hmt || [];
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.gitalk.enable</span>)&#123; %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">gitalk</span>', &#123;</span></div><div class="line"><span class="tag">      <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></div><div class="line"><span class="tag">      <span class="attr">title:</span> <span class="attr">post.title</span>,</span></div><div class="line"><span class="tag">      <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></div><div class="line"><span class="tag">  &#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="8-解决代码块行数因为某行太长而对不齐"><a href="#8-解决代码块行数因为某行太长而对不齐" class="headerlink" title="8. 解决代码块行数因为某行太长而对不齐"></a>8. 解决代码块行数因为某行太长而对不齐</h3><p>在 themes/yilia/source/main.0cf68a.css 文件中寻找并删除</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:pre-wrap</span>;</div></pre></td></tr></table></figure>
+<h3 id="9-取消失效的badjs"><a href="#9-取消失效的badjs" class="headerlink" title="9. 取消失效的badjs"></a>9. 取消失效的badjs</h3><p>作者原本想用badjs上报错误，但现在这个端口失效了。保留它会使得加载页面时间超过1s。</p>
+<p>在 themes/yilia/source/main.0cf68a.js 文件中寻找BJ_REPORT，并把所有的 id:1 改成 id:0</p>
 
       
 
@@ -403,7 +405,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在menu中增加归档"><span class="toc-number">1.</span> <span class="toc-text">1. 在menu中增加归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-修复失效的微信分享二维码"><span class="toc-number">2.</span> <span class="toc-text">2. 修复失效的微信分享二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><span class="toc-number">3.</span> <span class="toc-text">3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-修改头像上方颜色和wrap的渐变色"><span class="toc-number">4.</span> <span class="toc-text">4. 修改头像上方颜色和wrap的渐变色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改-aboutme-wrap-search-tag-wording-的颜色"><span class="toc-number">5.</span> <span class="toc-text">5. 修改 aboutme-wrap search-tag-wording 的颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改categories的路径"><span class="toc-number">6.</span> <span class="toc-text">6. 修改categories的路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-为yilia主题增加gitalk评论"><span class="toc-number">7.</span> <span class="toc-text">7. 为yilia主题增加gitalk评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-解决代码块行数因为某行太长而对不齐"><span class="toc-number">8.</span> <span class="toc-text">8. 解决代码块行数因为某行太长而对不齐</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在menu中增加归档"><span class="toc-number">1.</span> <span class="toc-text">1. 在menu中增加归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-修复失效的微信分享二维码"><span class="toc-number">2.</span> <span class="toc-text">2. 修复失效的微信分享二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><span class="toc-number">3.</span> <span class="toc-text">3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-修改头像上方颜色和wrap的渐变色"><span class="toc-number">4.</span> <span class="toc-text">4. 修改头像上方颜色和wrap的渐变色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改-aboutme-wrap-search-tag-wording-的颜色"><span class="toc-number">5.</span> <span class="toc-text">5. 修改 aboutme-wrap search-tag-wording 的颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改categories的路径"><span class="toc-number">6.</span> <span class="toc-text">6. 修改categories的路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-为yilia主题增加gitalk评论"><span class="toc-number">7.</span> <span class="toc-text">7. 为yilia主题增加gitalk评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-解决代码块行数因为某行太长而对不齐"><span class="toc-number">8.</span> <span class="toc-text">8. 解决代码块行数因为某行太长而对不齐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-取消失效的badjs"><span class="toc-number">9.</span> <span class="toc-text">9. 取消失效的badjs</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -542,11 +544,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HDOJ</a>
+                <a href="javascript:void(0)" class="js-tag color2">aliyun</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">aliyun</a>
+                <a href="javascript:void(0)" class="js-tag color5">HDOJ</a>
               </li>
              
               <li class="article-tag-list-item">
