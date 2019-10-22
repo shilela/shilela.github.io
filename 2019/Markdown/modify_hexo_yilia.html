@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
 <meta property="og:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T23:27:25.355Z">
+<meta property="og:updated_time" content="2019-10-22T11:11:06.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对yilia主题的改造">
 <meta name="twitter:description" content="划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
@@ -64,6 +64,8 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
+				<li><a href="/categories/essay/">随笔</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -85,6 +87,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/shilela" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="qq" target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2277866295&website=www.oicqzone.com" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/1488614" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
@@ -120,12 +124,16 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
 						<a class="github" target="_blank" href="https://github.com/shilela" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="qq" target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2277866295&website=www.oicqzone.com" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="bilibili" target="_blank" href="https://space.bilibili.com/1488614" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
@@ -135,12 +143,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories/essay/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -213,6 +223,10 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;/"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>改为</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="7-修正gitment连接异常"><a href="#7-修正gitment连接异常" class="headerlink" title="7. 修正gitment连接异常"></a>7. 修正gitment连接异常</h3><p>在themes/yilia/layout_partial/post/gitment.ejs中把</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//imsun.github.io/gitment/style/default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://jjeejj.github.io/css/gitment.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.wenjunjiang.win/js/gitment.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 
       
 
@@ -338,6 +352,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/Markdown/testcomment.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          测试评论
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/Markdown/RpiInfo.html" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">获得树莓派运行时的信息</div>
@@ -373,6 +396,22 @@
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/child/2019/Markdown/modify_hexo_yilia.html",
+  owner: 'shilela',
+  repo: 'shilela.github.io',
+  oauth: {
+    client_id: '5fc6c014c67949f30455',
+    client_secret: 'fa33463f650e8bdf073efc7b83653067beadfce8',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
@@ -466,11 +505,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Raspberry Pi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HDOJ</a>
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,11 +513,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Test</a>
+                <a href="javascript:void(0)" class="js-tag color5">HDOJ</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Test</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,7 +596,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">无情的早安机器233333&lt;br&gt;&lt;br&gt;什么都想学的闲人_(:з」∠)_</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">无情的早哟机器233333&lt;br&gt;&lt;br&gt;什么都想学的闲人_(:з」∠)_</div>
   	  	
     	</section>
     

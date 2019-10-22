@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试评论</title>
+    <url>/2019/Markdown/testcomment.html</url>
+    <content><![CDATA[<p>测试评论</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>Test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>对yilia主题的改造</title>
     <url>/2019/Markdown/modify_hexo_yilia.html</url>
     <content><![CDATA[<p>划了快两年水没更新，这次索性把Hexo默认的landescape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。<br><a id="more"></a></p>
@@ -41,6 +53,10 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;/"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>改为</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="7-修正gitment连接异常"><a href="#7-修正gitment连接异常" class="headerlink" title="7. 修正gitment连接异常"></a>7. 修正gitment连接异常</h3><p>在themes/yilia/layout_partial/post/gitment.ejs中把</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//imsun.github.io/gitment/style/default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://jjeejj.github.io/css/gitment.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.wenjunjiang.win/js/gitment.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>CS</category>
@@ -77,7 +93,7 @@
         <category>CS</category>
       </categories>
       <tags>
-        <tag>Raspberry Pi</tag>
+        <tag>树莓派</tag>
       </tags>
   </entry>
   <entry>
