@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://shilela.github.io">
-  <title>获得树莓派运行时的信息 | 没有标题_(:з)∠)_</title>
+  <title>hdu1042 | 没有标题_(:з)∠)_</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用Python获得树莓派运行时的信息">
-<meta name="keywords" content="树莓派">
+  <meta name="description" content="hdu1042 N!">
+<meta name="keywords" content="HDOJ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获得树莓派运行时的信息">
-<meta property="og:url" content="https://shilela.github.io/2019/Markdown/RpiInfo.html">
+<meta property="og:title" content="hdu1042">
+<meta property="og:url" content="https://shilela.github.io/2018/md/hduacm1042.html">
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
-<meta property="og:description" content="使用Python获得树莓派运行时的信息">
+<meta property="og:description" content="hdu1042 N!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-22T14:04:46.849Z">
+<meta property="og:updated_time" content="2019-10-21T01:56:40.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获得树莓派运行时的信息">
-<meta name="twitter:description" content="使用Python获得树莓派运行时的信息">
+<meta name="twitter:title" content="hdu1042">
+<meta name="twitter:description" content="hdu1042 N!">
   
     <link rel="alternative" href="/atom.xml" title="没有标题_(:з)∠)_" type="application/atom+xml">
   
@@ -175,47 +175,34 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Markdown/RpiInfo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-md/hduacm1042" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      获得树莓派运行时的信息
+      hdu1042
     </h1>
   
 
         
-        <a href="/2019/Markdown/RpiInfo.html" class="archive-article-date">
-  	<time datetime="2019-10-20T14:44:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
+        <a href="/2018/md/hduacm1042.html" class="archive-article-date">
+  	<time datetime="2018-01-20T14:11:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用Python获得树莓派运行时的信息<br><a id="more"></a></p>
-<h2 id="一、获取CPU的信息"><a href="#一、获取CPU的信息" class="headerlink" title="一、获取CPU的信息"></a>一、获取CPU的信息</h2><h3 id="1-vcgencmd命令"><a href="#1-vcgencmd命令" class="headerlink" title="1. vcgencmd命令"></a>1. vcgencmd命令</h3><p>树莓派提供了vcgencmd命令,可以用来查看树莓派的硬件情况。<br>使用以下命令来查看vcgencmd可用的参数列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ vcgencmd commands</div><div class="line">commands=<span class="string">"vcos, ap_output_control, ap_output_post_processing, vchi_test_init, vchi_test_exit, vctest_memmap, vctest_start, vctest_stop, vctest_set, vctest_get, pm_set_policy, pm_get_status, pm_show_stats, pm_start_logging, pm_stop_logging, version, commands, set_vll_dir, set_backlight, set_logging, get_lcd_info, arbiter, cache_flush, otp_dump, test_result, codec_enabled, get_camera, get_mem, measure_clock, measure_volts, scaling_kernel, scaling_sharpness, get_hvs_asserts, get_throttled, measure_temp, get_config, hdmi_ntsc_freqs, hdmi_adjust_clock, hdmi_status_show, hvs_update_fields, pwm_speedup, force_audio, hdmi_stream_channels, hdmi_channel_map, display_power, read_ring_osc, memtest, dispmanx_list, get_rsts, schmoo, render_bar, disk_notify, inuse_notify, sus_suspend, sus_status, sus_is_enabled, sus_stop_test_thread, egl_platform_switch, mem_validate, mem_oom, mem_reloc_stats, hdmi_cvt, hdmi_timings, file"</span></div></pre></td></tr></table></figure>
-<p>其中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ vcgencmd measure_temp</div><div class="line">temp=34.3<span class="string">'C</span></div></pre></td></tr></table></figure>
-<p>可以用来查看当前CPU的温度</p>
-<h3 id="2-top命令"><a href="#2-top命令" class="headerlink" title="2. top命令"></a>2. top命令</h3><p>top命令可以实时动态地查看系统的整体运行情况。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ top -n&lt;次数&gt;: 循环显示的次数</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ top -n1</div><div class="line">top - 23:35:53 up 1 min,  1 user,  load average: 0.22, 0.13, 0.05</div><div class="line">Tasks: 114 total,   1 running,  53 sleeping,   0 stopped,   0 zombie</div><div class="line">%Cpu(s):  2.2 us,  2.1 sy,  0.0 ni, 94.8 id,  0.9 wa,  0.0 hi,  0.1 si,  0.0 st</div><div class="line">KiB Mem :   765604 total,   635916 free,    36532 used,    93156 buff/cache</div><div class="line">KiB Swap:   102396 total,   102396 free,        0 used.   674900 avail Mem</div></pre></td></tr></table></figure>
-<p>其中第三行 2.2 us 表示用户占用CPU的百分比为2.2%</p>
-<h3 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3. 代码实现"></a>3. 代码实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getCPUinfo</span><span class="params">()</span>:</span></div><div class="line">    <span class="comment"># temperature of CPU</span></div><div class="line">    <span class="keyword">with</span> os.popen(<span class="string">'vcgencmd measure_temp'</span>) <span class="keyword">as</span> p:</div><div class="line">        temperature = p.readline().replace(<span class="string">"temp="</span>,<span class="string">""</span>).replace(<span class="string">"'C\n"</span>,<span class="string">""</span>)</div><div class="line">    </div><div class="line">    <span class="comment"># percent of CPU load</span></div><div class="line">    <span class="keyword">with</span> os.popen(<span class="string">"top -n1 | awk '/Cpu\(s\):/ &#123;print $2&#125;'"</span>) <span class="keyword">as</span> p:</div><div class="line">        load = p.readline().strip()</div><div class="line"></div><div class="line">    <span class="keyword">return</span> (temperature,load)</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="二、获取内存的信息"><a href="#二、获取内存的信息" class="headerlink" title="二、获取内存的信息"></a>二、获取内存的信息</h2><h3 id="1-free命令"><a href="#1-free命令" class="headerlink" title="1. free命令"></a>1. free命令</h3><p>显示内存的使用情况</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ free (选项)</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ free -m <span class="comment">#以MB为单位显示内存使用情况</span></div><div class="line">              total        used        free      shared  buff/cache   available</div><div class="line">Mem:            747          36         602          14         108         648</div><div class="line">Swap:            99           0          99</div></pre></td></tr></table></figure>
-<h3 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getRAMinfo</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    Return the list of RAM information (unit=MB)</span></div><div class="line"><span class="string">    Index 0: total</span></div><div class="line"><span class="string">    Index 1: used</span></div><div class="line"><span class="string">    Index 2: free</span></div><div class="line"><span class="string">    """</span></div><div class="line">    <span class="keyword">with</span> os.popen(<span class="string">"free -m"</span>) <span class="keyword">as</span> p:</div><div class="line">        line = p.readlines()[<span class="number">1</span>]</div><div class="line">        ram_info = line.split()[<span class="number">1</span>:<span class="number">4</span>]</div><div class="line">    <span class="keyword">return</span> ram_info</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="三、获取硬盘的信息"><a href="#三、获取硬盘的信息" class="headerlink" title="三、获取硬盘的信息"></a>三、获取硬盘的信息</h2><h3 id="1-df命令"><a href="#1-df命令" class="headerlink" title="1. df命令"></a>1. df命令</h3><p>显示磁盘的相关信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ df (选项) (参数)</div><div class="line"><span class="comment"># -h: 以可读性较高的方式来显示信息</span></div><div class="line"><span class="comment"># / : 显示 / 目录中可用空间量</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pi@raspberrypi:~ $ df -h /</div><div class="line">Filesystem      Size  Used Avail Use% Mounted on</div><div class="line">/dev/root        15G  2.5G   12G  18% /</div></pre></td></tr></table></figure>
-<h3 id="2-代码实现-1"><a href="#2-代码实现-1" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getDiskinfo</span><span class="params">()</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    Return the list of disk space information</span></div><div class="line"><span class="string">    Index 0: total disk space</span></div><div class="line"><span class="string">    Index 1: used disk space</span></div><div class="line"><span class="string">    Index 2: remaining disk space</span></div><div class="line"><span class="string">    Index 3: percentage of disk used</span></div><div class="line"><span class="string">    """</span></div><div class="line">    <span class="keyword">with</span> os.popen(<span class="string">"df -h /"</span>) <span class="keyword">as</span> p:</div><div class="line">        line = p.readlines()[<span class="number">1</span>]</div><div class="line">        disk_info = line.split()[<span class="number">1</span>:<span class="number">5</span>]</div><div class="line">    <span class="keyword">return</span> disk_info</div></pre></td></tr></table></figure>
+        <p>hdu1042 N!<br><a id="more"></a></p>
+<h2 id="hdu1042-N"><a href="#hdu1042-N" class="headerlink" title="hdu1042 N!"></a>hdu1042 N!</h2><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Given an integer N(0 ≤ N ≤ 10000), your task is to calculate N!</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>One N in one line, process to the end of file.</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each N, output N! in one line.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>1<br>2<br>3</p>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>1<br>2<br>6</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fac</span><span class="params">(<span class="keyword">int</span> num)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> num;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num)!=EOF)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(num)</div><div class="line">            fac(num);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"1\n"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">fac</span><span class="params">(<span class="keyword">int</span> num)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> a[<span class="number">40000</span>];</div><div class="line">    <span class="keyword">int</span> i,j,k,t;</div><div class="line">    <span class="comment">//j表示是与i相乘的位数</span></div><div class="line">    <span class="comment">//k表示进位</span></div><div class="line">    <span class="comment">//t表示此时的最高位位数</span></div><div class="line">    <span class="keyword">if</span>(num&lt;<span class="number">10000</span>)</div><div class="line">        t=<span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        t=<span class="number">1</span>;</div><div class="line">    a[<span class="number">0</span>]=num%<span class="number">10000</span>;</div><div class="line">    a[<span class="number">1</span>]=num/<span class="number">10000</span>;</div><div class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;num;i++)</div><div class="line">    &#123;</div><div class="line">        j=k=<span class="number">0</span>;<span class="comment">//每次清零位数和进位</span></div><div class="line">        <span class="keyword">while</span>(j&lt;=t)</div><div class="line">        &#123;</div><div class="line">            a[j]=a[j]*i+k;</div><div class="line">            k=a[j]/<span class="number">10000</span>;</div><div class="line">            a[j]=a[j]%<span class="number">10000</span>;</div><div class="line">            j++;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//乘到最后一位后，判断进位是否为0</span></div><div class="line">        <span class="comment">//不为零，k赋给j</span></div><div class="line">        <span class="comment">//为零，j减一</span></div><div class="line">        <span class="comment">//并记录最高位位数j的值</span></div><div class="line">        <span class="keyword">if</span>(k)</div><div class="line">            a[j]=k;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            j--;</div><div class="line">            t=j;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(i=j;i&gt;=<span class="number">0</span>;i--)</div><div class="line">    &#123;</div><div class="line">        <span class="comment">//不是最高位，且小于1000时要补零</span></div><div class="line">        <span class="keyword">if</span>(i!=j||a[i]&lt;<span class="number">1000</span>)</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%04d"</span>,a[i]);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i]);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -228,7 +215,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树莓派</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HDOJ</a>
         		</li>
       		
 		</ul>
@@ -295,7 +282,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shilela.github.io/2019/Markdown/RpiInfo.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shilela.github.io/2018/md/hduacm1042.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +296,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/Markdown/modify_hexo_yilia.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/md/article2.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          对yilia主题的改造
+          试一试阿里云ECS
         
       </div>
     </a>
   
   
-    <a href="/2018/Markdown/article2.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">试一试阿里云ECS</div>
+    <a href="/2017/md/hduacm1018.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hdu1018</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -339,19 +326,6 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、获取CPU的信息"><span class="toc-number">1.</span> <span class="toc-text">一、获取CPU的信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-vcgencmd命令"><span class="toc-number">1.1.</span> <span class="toc-text">1. vcgencmd命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-top命令"><span class="toc-number">1.2.</span> <span class="toc-text">2. top命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-代码实现"><span class="toc-number">1.3.</span> <span class="toc-text">3. 代码实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、获取内存的信息"><span class="toc-number">2.</span> <span class="toc-text">二、获取内存的信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-free命令"><span class="toc-number">2.1.</span> <span class="toc-text">1. free命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-代码实现"><span class="toc-number">2.2.</span> <span class="toc-text">2. 代码实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、获取硬盘的信息"><span class="toc-number">3.</span> <span class="toc-text">三、获取硬盘的信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-df命令"><span class="toc-number">3.1.</span> <span class="toc-text">1. df命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-代码实现-1"><span class="toc-number">3.2.</span> <span class="toc-text">2. 代码实现</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
         
     </div>
 </aside>
@@ -382,7 +356,7 @@ if(true){
         repo: 'shilela.github.io',
         owner: 'shilela',
         admin: ['shilela'],
-        id: 'Sun Oct 20 2019 22:44:26 GMT+0800',
+        id: 'Sat Jan 20 2018 22:11:18 GMT+0800',
         distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container')
@@ -482,7 +456,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">aliyun</a>
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,11 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">aliyun</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
