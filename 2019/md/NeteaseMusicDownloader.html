@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://shilela.github.io/img/NeteaseMusicDownloader/1.png">
 <meta property="og:image" content="https://shilela.github.io/img/NeteaseMusicDownloader/2.png">
-<meta property="og:updated_time" content="2019-10-25T13:33:00.179Z">
+<meta property="og:updated_time" content="2019-10-25T14:33:48.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="下载网易云音乐中的音乐">
 <meta name="twitter:description" content="如同把大象关进冰箱里需要三步那样，下载网易云音乐中的音乐也只需要三步，开机-连接网络-下载（逃以python为例，编写下载网易云音乐的程序">
@@ -219,7 +219,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><a href="https://www.jianshu.com/p/069e88181488" target="_blank" rel="external">解析网易云音乐的加密方式</a></li>
 </ul>
-<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3. 注意事项"></a>3. 注意事项</h3><h4 id="python的AES加密"><a href="#python的AES加密" class="headerlink" title="python的AES加密"></a>python的AES加密</h4><p>python的AES加密需要字节序列的长度为16的整数。需要这么操作。</p>
+<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3. 注意事项"></a>3. 注意事项</h3><h4 id="python的AES加密"><a href="#python的AES加密" class="headerlink" title="python的AES加密"></a>python的AES加密</h4><p>python的AES加密需要字节序列的长度为16倍数的整数。需要这么操作。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">padding</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    ensure len(s) % 16 = 0</span></div><div class="line"><span class="string">    """</span></div><div class="line">    s = bytes(s, <span class="string">'utf-8'</span>)</div><div class="line">    <span class="keyword">return</span> s + (<span class="number">16</span> - len(s) % <span class="number">16</span>) * bytes(chr(<span class="number">16</span> - len(s) % <span class="number">16</span>),<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
 <h4 id="encSecKey是由i决定的"><a href="#encSecKey是由i决定的" class="headerlink" title="encSecKey是由i决定的"></a>encSecKey是由i决定的</h4><p>encSecKey是由i决定的，但是这个参数是浏览器这边随机生成的，所以可以写死。</p>
 <p>通过断点可以获得一对encSecKey和i</p>
