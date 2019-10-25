@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://shilela.github.io">
-  <title>对yilia主题的改造 | 没有标题_(:з)∠)_</title>
+  <title>下载网易云音乐中的音乐 | 没有标题_(:з)∠)_</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="划了快两年水没更新，这次索性把Hexo默认的landscape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="如同把大象关进冰箱里需要三步那样，下载网易云音乐中的音乐也只需要三步，开机-连接网络-下载（逃以python为例，编写下载网易云音乐的程序">
+<meta name="keywords" content="python,网易云音乐">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对yilia主题的改造">
-<meta property="og:url" content="https://shilela.github.io/2019/md/modify_hexo_yilia.html">
+<meta property="og:title" content="下载网易云音乐中的音乐">
+<meta property="og:url" content="https://shilela.github.io/2019/md/NeteaseMusicDownloader.html">
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
-<meta property="og:description" content="划了快两年水没更新，这次索性把Hexo默认的landscape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
+<meta property="og:description" content="如同把大象关进冰箱里需要三步那样，下载网易云音乐中的音乐也只需要三步，开机-连接网络-下载（逃以python为例，编写下载网易云音乐的程序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-23T15:00:02.329Z">
+<meta property="og:image" content="https://shilela.github.io/img/NeteaseMusicDownloader/1.png">
+<meta property="og:image" content="https://shilela.github.io/img/NeteaseMusicDownloader/2.png">
+<meta property="og:updated_time" content="2019-10-25T13:33:00.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对yilia主题的改造">
-<meta name="twitter:description" content="划了快两年水没更新，这次索性把Hexo默认的landscape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。">
+<meta name="twitter:title" content="下载网易云音乐中的音乐">
+<meta name="twitter:description" content="如同把大象关进冰箱里需要三步那样，下载网易云音乐中的音乐也只需要三步，开机-连接网络-下载（逃以python为例，编写下载网易云音乐的程序">
+<meta name="twitter:image" content="https://shilela.github.io/img/NeteaseMusicDownloader/1.png">
   
     <link rel="alternative" href="/atom.xml" title="没有标题_(:з)∠)_" type="application/atom+xml">
   
@@ -175,74 +178,56 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-md/modify_hexo_yilia" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-md/NeteaseMusicDownloader" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      对yilia主题的改造
+      下载网易云音乐中的音乐
     </h1>
   
 
         
-        <a href="/2019/md/modify_hexo_yilia.html" class="archive-article-date">
-  	<time datetime="2019-10-21T15:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
+        <a href="/2019/md/NeteaseMusicDownloader.html" class="archive-article-date">
+  	<time datetime="2019-10-24T02:15:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>划了快两年水没更新，这次索性把Hexo默认的landscape主题改成了yilia主题。yilia主题是Hexo中一款较为好看的主题，但我自己还是觉得有点别扭，于是自己动手对其进行了些修改。<br><a id="more"></a></p>
-<h3 id="1-在menu中增加归档"><a href="#1-在menu中增加归档" class="headerlink" title="1. 在menu中增加归档"></a>1. 在menu中增加归档</h3><p>修改 themes/yilia/_config.yml</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">menu:</span></div><div class="line">  <span class="string">主页:</span> <span class="string">/</span></div><div class="line">  <span class="string">归档:</span> <span class="string">/archives/index.html</span></div></pre></td></tr></table></figure>
-<h3 id="2-修复失效的微信分享二维码"><a href="#2-修复失效的微信分享二维码" class="headerlink" title="2. 修复失效的微信分享二维码"></a>2. 修复失效的微信分享二维码</h3><p>在themes/yilia/layout/_partial/post/share.ejs文件中</p>
-<p>把第 49 行中的</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//pan.baidu.com/share/qrcode?url=</div></pre></td></tr></table></figure>
-<p>修改为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</div></pre></td></tr></table></figure>
-<h3 id="3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><a href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃" class="headerlink" title="3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃"></a>3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</h3><p>在 themes/yilia/source/main.0cf68a.css 文件中</p>
+        <p>如同把大象关进冰箱里需要三步那样，下载网易云音乐中的音乐也只需要三步，开机-连接网络-下载（逃<br>以python为例，编写下载网易云音乐的程序</p>
+<a id="more"></a>
+<h3 id="1-寻找请求的目标和参数"><a href="#1-寻找请求的目标和参数" class="headerlink" title="1. 寻找请求的目标和参数"></a>1. 寻找请求的目标和参数</h3><p>使用浏览器，打开网易云主页，并打开任意一首音乐的详情页。接着打开浏览器的开发者工具，点击network选项卡，并按F5刷新网页。在开发者工具中的时间流上方的Filter过滤器中选择XHR。逐一点击，查看Headers信息和Preview中的内容。</p>
 <ul>
-<li>修改smart-menu</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.header-smart-menu</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">12px</span>;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>调整font-size，我调整到了15px。</p>
-<ul>
-<li>修改menu</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.header-menu</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>:<span class="number">14px</span>;</div><div class="line">    <span class="attribute">min-width</span>:<span class="number">300px</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<p>调整font-size，我调整到了20px。</p>
-<h3 id="4-修改头像上方颜色和wrap的渐变色"><a href="#4-修改头像上方颜色和wrap的渐变色" class="headerlink" title="4. 修改头像上方颜色和wrap的渐变色"></a>4. 修改头像上方颜色和wrap的渐变色</h3><p>修改 themes/yilia/_config.yml<br>找到样式定制并修改如下</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 样式定制 - 一般不需要修改，除非有很强的定制欲望…</span></div><div class="line"><span class="attr">style:</span></div><div class="line">  <span class="comment"># 头像上面的背景颜色</span></div><div class="line"><span class="attr">  header:</span> <span class="string">'#003153'</span></div><div class="line">  <span class="comment"># 右滑板块背景</span></div><div class="line"><span class="attr">  slider:</span> <span class="string">'linear-gradient(200deg,#feeeed,#9b95c9)'</span></div></pre></td></tr></table></figure>
-<h3 id="5-修改-aboutme-wrap-search-tag-wording-的颜色"><a href="#5-修改-aboutme-wrap-search-tag-wording-的颜色" class="headerlink" title="5. 修改 aboutme-wrap search-tag-wording 的颜色"></a>5. 修改 aboutme-wrap search-tag-wording 的颜色</h3><p>因为背景颜色较淡，把部分字体颜色加深，如侧栏标题，友链，关于我部分</p>
-<p>在 themes/yilia/source/main.0cf68a.css 文件中。</p>
-<ul>
-<li><p>寻找search-tag-wording，设置颜色为#4d4d4d。</p>
+<li><p>存有歌词：<a href="https://music.163.com/weapi/song/lyric?csrf_token=" target="_blank" rel="external">https://music.163.com/weapi/song/lyric?csrf_token=</a></p>
 </li>
-<li><p>寻找aboutme-wrap，设置颜色为#4d4d4d。</p>
+<li><p>存有歌曲文件链接：<a href="https://music.163.com/weapi/song/enhance/player/url/v1?csrf_token=" target="_blank" rel="external">https://music.163.com/weapi/song/enhance/player/url/v1?csrf_token=</a></p>
 </li>
 </ul>
-<p>把这一段</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.tools-col</span> <span class="selector-class">.tools-section</span> <span class="selector-class">.search-ul</span> <span class="selector-class">.search-title</span> &#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">    <span class="attribute">white-space</span>: nowrap;</div><div class="line">    <span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#fffff8</span>;</div><div class="line">    <span class="attribute">text-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="built_in">rgba</span>(77,77,77,.25)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>颜色改为#4d4d4d</p>
-<h3 id="6-修改categories的路径"><a href="#6-修改categories的路径" class="headerlink" title="6. 修改categories的路径"></a>6. 修改categories的路径</h3><p>原主题中的代码有点问题，导致categories的路径结尾总是多出一个 /</p>
-<p>在themes/yilia/layout/_partial/post/category.ejs中，把第7行</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;/"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>改为</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%= config.root %&gt;&lt;%= tag.path %&gt;"</span> <span class="attr">class</span>=<span class="string">"article-tag-list-link color&lt;%= tag.name.length % 5 + 1 %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%-tag.name%</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="7-为yilia主题增加gitalk评论"><a href="#7-为yilia主题增加gitalk评论" class="headerlink" title="7. 为yilia主题增加gitalk评论"></a>7. 为yilia主题增加gitalk评论</h3><p>修改 themes/yilia/_config.yml，在其中添加以下代码，并填上必要信息</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#6 Gitalk</span></div><div class="line"><span class="attr">gitalk:</span></div><div class="line"><span class="attr">  enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  client_id:</span> <span class="string">''</span> <span class="comment"># 申请获得的id</span></div><div class="line"><span class="attr">  client_secret:</span> <span class="string">''</span> <span class="comment"># 申请获得的secret</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">''</span> <span class="comment"># 仓库名称</span></div><div class="line"><span class="attr">  owner:</span> <span class="string">''</span> <span class="comment"># 自己的用户名</span></div><div class="line"><span class="attr">  admin:</span> <span class="string">''</span> <span class="comment"># 自己的用户名</span></div><div class="line"><span class="attr">  pager_direction:</span> <span class="string">'first'</span> <span class="comment">#排序方式是从旧到新（first）还是从新到旧（last）</span></div><div class="line"><span class="attr">  distractionFreeMode:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>新建文件/themes/yilia/layout/_partial/post/gitalk.ejs</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span> <span class="attr">style</span>=<span class="string">"padding: 0px 30px 0px 30px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  </div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="xml">if(<span class="tag">&lt;<span class="name">%=theme.gitalk.enable%</span>&gt;</span>)&#123;</span></div><div class="line"><span class="undefined">        var gitalk = new Gitalk(&#123;</span></div><div class="line"><span class="xml">        clientID: '<span class="tag">&lt;<span class="name">%=theme.gitalk.Client_id%</span>&gt;</span>',</span></div><div class="line"><span class="xml">        clientSecret: '<span class="tag">&lt;<span class="name">%=theme.gitalk.Client_secret%</span>&gt;</span>',</span></div><div class="line"><span class="xml">        repo: '<span class="tag">&lt;<span class="name">%=theme.gitalk.repo%</span>&gt;</span>',</span></div><div class="line"><span class="xml">        owner: '<span class="tag">&lt;<span class="name">%=theme.gitalk.owner%</span>&gt;</span>',</span></div><div class="line"><span class="xml">        admin: ['<span class="tag">&lt;<span class="name">%=theme.gitalk.admin%</span>&gt;</span>'],</span></div><div class="line"><span class="xml">        id: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">page.date</span> %&gt;</span>',</span></div><div class="line"><span class="xml">        pagerDirection: '<span class="tag">&lt;<span class="name">%=theme.gitalk.pager_direction%</span>&gt;</span>',</span></div><div class="line"><span class="xml">        distractionFreeMode: '<span class="tag">&lt;<span class="name">%=theme.gitalk.distractionFreeMode%</span>&gt;</span>'</span></div><div class="line"><span class="undefined">&#125;)</span></div><div class="line"><span class="undefined">gitalk.render('gitalk-container')</span></div><div class="line"><span class="undefined">&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>新建文件 /themes/yilia/layout/_partial/article.ejs</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.gitalk.enable</span>)&#123; %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">gitalk</span>', &#123;</span></div><div class="line"><span class="tag">      <span class="attr">key:</span> <span class="attr">post.slug</span>,</span></div><div class="line"><span class="tag">      <span class="attr">title:</span> <span class="attr">post.title</span>,</span></div><div class="line"><span class="tag">      <span class="attr">url:</span> <span class="attr">config.url</span>+<span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></div><div class="line"><span class="tag">  &#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="8-解决代码块行数因为某行太长而对不齐"><a href="#8-解决代码块行数因为某行太长而对不齐" class="headerlink" title="8. 解决代码块行数因为某行太长而对不齐"></a>8. 解决代码块行数因为某行太长而对不齐</h3><p>在 themes/yilia/source/main.0cf68a.css 文件中寻找并删除</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:pre-wrap</span>;</div></pre></td></tr></table></figure>
-<h3 id="9-取消失效的badjs"><a href="#9-取消失效的badjs" class="headerlink" title="9. 取消失效的badjs"></a>9. 取消失效的badjs</h3><p>作者原本想用badjs上报错误，但现在这个端口失效了。保留它会使得加载页面时间超过1s。</p>
-<p>在 themes/yilia/source/main.0cf68a.js 文件中寻找BJ_REPORT，并把所有的 id:1 改成 id:0</p>
-
+<p>此外还有</p>
+<ul>
+<li><p>网易云生成的歌曲外链： <a href="http://music.163.com/song/media/outer/url?id=" target="_blank" rel="external">http://music.163.com/song/media/outer/url?id=</a></p>
+</li>
+<li><p>老版本接口：<a href="https://music.163.com/weapi/song/enhance/player/url?csrf_token=" target="_blank" rel="external">https://music.163.com/weapi/song/enhance/player/url?csrf_token=</a></p>
+</li>
+</ul>
+<h3 id="2-使用搜索引擎搜索相关内容"><a href="#2-使用搜索引擎搜索相关内容" class="headerlink" title="2. 使用搜索引擎搜索相关内容"></a>2. 使用搜索引擎搜索相关内容</h3><p>在搜索引擎中搜索上述几个链接。</p>
+<p>熟练使用搜索引擎也是必备的技能，这里就不对详细分析网易云的API接口了。<br>这里有个连接可以看一下，别人是如何分析的。这篇文章是全网解释得最清楚的一篇文章。</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/069e88181488" target="_blank" rel="external">解析网易云音乐的加密方式</a></li>
+</ul>
+<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3. 注意事项"></a>3. 注意事项</h3><h4 id="python的AES加密"><a href="#python的AES加密" class="headerlink" title="python的AES加密"></a>python的AES加密</h4><p>python的AES加密需要字节序列的长度为16的整数。需要这么操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">padding</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    ensure len(s) % 16 = 0</span></div><div class="line"><span class="string">    """</span></div><div class="line">    s = bytes(s, <span class="string">'utf-8'</span>)</div><div class="line">    <span class="keyword">return</span> s + (<span class="number">16</span> - len(s) % <span class="number">16</span>) * bytes(chr(<span class="number">16</span> - len(s) % <span class="number">16</span>),<span class="string">'utf-8'</span>)</div></pre></td></tr></table></figure>
+<h4 id="encSecKey是由i决定的"><a href="#encSecKey是由i决定的" class="headerlink" title="encSecKey是由i决定的"></a>encSecKey是由i决定的</h4><p>encSecKey是由i决定的，但是这个参数是浏览器这边随机生成的，所以可以写死。</p>
+<p>通过断点可以获得一对encSecKey和i</p>
+<p>在我自己写的程序里这一对 encSecKey和i 分别叫做 encSecKey和secretKey</p>
+<h3 id="4-补充一些打断点后的图"><a href="#4-补充一些打断点后的图" class="headerlink" title="4. 补充一些打断点后的图"></a>4. 补充一些打断点后的图</h3><p>注意下一对encSecKey和i</p>
+<p><img src="/img/NeteaseMusicDownloader/1.png" alt="1"></p>
+<p><img src="/img/NeteaseMusicDownloader/2.png" alt="2"></p>
+<h3 id="5-代码实现"><a href="#5-代码实现" class="headerlink" title="5. 代码实现"></a>5. 代码实现</h3><h2 id="NeteaseMusicDownloader"><a href="#NeteaseMusicDownloader" class="headerlink" title="NeteaseMusicDownloader"></a><a href="https://github.com/shilela/NeteaseMusicDownloader" target="_blank" rel="external">NeteaseMusicDownloader</a></h2>
       
 
       
@@ -286,7 +271,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		
 		</ul>
@@ -353,7 +342,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shilela.github.io/2019/md/modify_hexo_yilia.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shilela.github.io/2019/md/NeteaseMusicDownloader.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -367,18 +356,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/md/testcomment.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          测试评论
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/md/RpiInfo.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">获得树莓派运行时的信息</div>
+    <a href="/2019/md/testcomment.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试评论</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -405,7 +385,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在menu中增加归档"><span class="toc-number">1.</span> <span class="toc-text">1. 在menu中增加归档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-修复失效的微信分享二维码"><span class="toc-number">2.</span> <span class="toc-text">2. 修复失效的微信分享二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-修改左边栏中menu，samrt-menu字体大小-ps：我觉得有点小（逃"><span class="toc-number">3.</span> <span class="toc-text">3. 修改左边栏中menu，samrt-menu字体大小 ps：我觉得有点小（逃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-修改头像上方颜色和wrap的渐变色"><span class="toc-number">4.</span> <span class="toc-text">4. 修改头像上方颜色和wrap的渐变色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-修改-aboutme-wrap-search-tag-wording-的颜色"><span class="toc-number">5.</span> <span class="toc-text">5. 修改 aboutme-wrap search-tag-wording 的颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改categories的路径"><span class="toc-number">6.</span> <span class="toc-text">6. 修改categories的路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-为yilia主题增加gitalk评论"><span class="toc-number">7.</span> <span class="toc-text">7. 为yilia主题增加gitalk评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-解决代码块行数因为某行太长而对不齐"><span class="toc-number">8.</span> <span class="toc-text">8. 解决代码块行数因为某行太长而对不齐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-取消失效的badjs"><span class="toc-number">9.</span> <span class="toc-text">9. 取消失效的badjs</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-寻找请求的目标和参数"><span class="toc-number">1.</span> <span class="toc-text">1. 寻找请求的目标和参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用搜索引擎搜索相关内容"><span class="toc-number">2.</span> <span class="toc-text">2. 使用搜索引擎搜索相关内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-注意事项"><span class="toc-number">3.</span> <span class="toc-text">3. 注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#python的AES加密"><span class="toc-number">3.1.</span> <span class="toc-text">python的AES加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#encSecKey是由i决定的"><span class="toc-number">3.2.</span> <span class="toc-text">encSecKey是由i决定的</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-补充一些打断点后的图"><span class="toc-number">4.</span> <span class="toc-text">4. 补充一些打断点后的图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-代码实现"><span class="toc-number">5.</span> <span class="toc-text">5. 代码实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NeteaseMusicDownloader"><span class="toc-number"></span> <span class="toc-text">NeteaseMusicDownloader</span></a>
                     </div>
                 </span>
             </div>
@@ -440,7 +420,7 @@ if(true){
         repo: 'shilela.github.io',
         owner: 'shilela',
         admin: ['shilela'],
-        id: 'Mon Oct 21 2019 23:22:46 GMT+0800',
+        id: 'Thu Oct 24 2019 10:15:30 GMT+0800',
         pagerDirection: 'first',
         distractionFreeMode: ''
 })
