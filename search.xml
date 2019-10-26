@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>191026</title>
+    <url>/2019/essay/191026.html</url>
+    <content><![CDATA[<a id="more"></a>
+<h3 id="11月计划"><a href="#11月计划" class="headerlink" title="11月计划"></a>11月计划</h3><ul>
+<li>学习FFmpeg</li>
+<li>搞清bilibili直播api</li>
+<li>检测某文件夹下相似图片</li>
+<li>Google Chrome浏览器插件编写</li>
+<li>整理五、六年堆积下来快2个G的插画</li>
+<li>重新学习MySQL</li>
+<li>争取六级过550（逃</li>
+<li>睡觉</li>
+</ul>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ass文件详解</title>
     <url>/2019/md/assintro.html</url>
     <content><![CDATA[<p>部分引用自<a href="https://blog.csdn.net/winglyx/article/details/6791719" target="_blank" rel="external">ass字幕格式</a></p>
