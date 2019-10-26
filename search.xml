@@ -112,7 +112,7 @@
 <td></td>
 </tr>
 <tr>
-<td>ScaledBorderAndShadow</td>
+<td>ScaledBorder<br>AndShadow<br>(无空格)</td>
 <td>指定边框宽度与阴影深度是否随着视频分辨率等比例缩放. 可为Yes, No. 默认为No.<br>当取值为No时, 边框宽度与阴影深度完全按照指定的像素数显示.<br>当取值为Yes时, 边框宽度与阴影深度随着实际视频的分辨率同等比例缩放.</td>
 <td></td>
 </tr>
