@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://shilela.github.io">
-  <title>Tag: Test | 没有标题_(:з)∠)_</title>
+  <title>ass文件详解 | 没有标题_(:з)∠)_</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="没有标题_(:з)∠)_">
-<meta property="og:url" content="https://shilela.github.io/tags/Test/index.html">
+  <meta name="description" content="部分引用自ass字幕格式">
+<meta name="keywords" content="ass">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ass文件详解">
+<meta property="og:url" content="https://shilela.github.io/2019/md/assintro.html">
 <meta property="og:site_name" content="没有标题_(:з)∠)_">
+<meta property="og:description" content="部分引用自ass字幕格式">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-26T13:19:22.724Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="没有标题_(:з)∠)_">
+<meta name="twitter:title" content="ass文件详解">
+<meta name="twitter:description" content="部分引用自ass字幕格式">
   
     <link rel="alternative" href="/atom.xml" title="没有标题_(:з)∠)_" type="application/atom+xml">
   
@@ -170,178 +175,658 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-md/assintro" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/md/testcomment.html" class="archive-article-date">
-  	<time datetime="2019-10-22T10:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/md/testcomment.html">测试评论</a>
+    <h1 class="article-title" itemprop="name">
+      ass文件详解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/md/assintro.html" class="archive-article-date">
+  	<time datetime="2019-10-26T13:19:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>部分引用自<a href="https://blog.csdn.net/winglyx/article/details/6791719" target="_blank" rel="external">ass字幕格式</a></p>
+<a id="more"></a>
+<h2 id="一、ass文件简介"><a href="#一、ass文件简介" class="headerlink" title="一、ass文件简介"></a>一、ass文件简介</h2><p>引用自维基百科</p>
+<blockquote>
+<p>SubStation Alpha（或 Sub Station Alpha），简称SSA，是由 CS Low（亦作 Kotus）创建、比传统字幕（如SRT）更加强大先进的字幕文件格式。该格式在Windows平台上可以经播放器由VSFilter渲染进行播放。这是一款广受欢迎且已停止开发的字幕编辑制作工具。<br>而Advanced SubStation Alpha（ASS）是一种比SSA更先进的字幕脚本格式。基于SSA 4.00+编码构建。ASS的主要变化就是在SSA编写风格的基础上增添更多的效果和指令。<br>该字幕格式常被字幕组所应用，分为内挂字幕、外挂字幕和内嵌字幕三种形式。内挂字幕一般指字幕文件与视频一同封装在MKV文件中，播放时需经过VSFilter渲染。外挂字幕指字幕文件以单独形式存在，播放时经VSFilter渲染到视频上。内、外挂字幕又称软字幕，是可以提取、取出和查看源代码的。而内嵌字幕则是指字幕被以图形方式硬编码到视频中，所以播放时不需VSFilter等渲染，一般来说，该过程不可逆。<br>SSA当前版本为V4.00。ASS则使用更高级的V4.00+编码。<br>目前有很多播放器支持渲染SSA、ASS字幕。</p>
+</blockquote>
+<h2 id="二、ass文件结构"><a href="#二、ass文件结构" class="headerlink" title="二、ass文件结构"></a>二、ass文件结构</h2><h3 id="1-Script-Info"><a href="#1-Script-Info" class="headerlink" title="1. [Script Info]"></a>1. [Script Info]</h3><p>这一部分包含了文件内容的标题和总体信息。 [Script Info]这一行必须是v4版本文件的第一行</p>
+<h3 id="2-v4-Styles"><a href="#2-v4-Styles" class="headerlink" title="2. [v4 Styles]"></a>2. [v4 Styles]</h3><p>字幕正文使用的风格都在这一部分做出相关定义。 ASS使用的是[v4+ Styles]</p>
+<h3 id="3-Events"><a href="#3-Events" class="headerlink" title="3. [Events]"></a>3. [Events]</h3><p>这部分包含所有的事件, 有字幕, 评论, 图片, 声音, 影片和命令. 基本上屏幕中出现的所有内容都集中在这一部分.</p>
+<h3 id="4-Fonts"><a href="#4-Fonts" class="headerlink" title="4. [Fonts]"></a>4. [Fonts]</h3><p>如果想把字体内嵌入字幕文件, 那么字体文件须采用数字编码后放在这一部分. 只有truetyle字体才能内嵌入SSA/ASS文件<br>每一个内嵌字体文件以一行开头, 格式如下:<br>fontname: &lt;文件名&gt;<br>开头的”fontname”必须全部用小写, 如果大写会让ASS文件视其为文件编码的一部分.<br>&lt;文件名&gt;是SSA文件保存字体时使用的文件名, 命名规则如下:<br>truetype字体原来的字体名称<br>加一条下划线<br>如果是粗体则加一个”B”<br>如果是斜休则加一个”I”<br>加一个数字表明字体编码(字符集)<br>最后加上”.ttf”<br>例如:<br>fontname: comic_B0.ttf<br>在这一行之后是一些可打印的字符组成的行, 代表组成这个字体的二进制字符, 除了最后一行可能短些, 其余每行有80个字符.<br>从二进制转换到字符用的是UUE-encoding的编码方式</p>
+<h2 id="三、各部分说明"><a href="#三、各部分说明" class="headerlink" title="三、各部分说明"></a>三、各部分说明</h2><h3 id="1-Script-Info-部分的说明"><a href="#1-Script-Info-部分的说明" class="headerlink" title="1. [Script Info]部分的说明"></a>1. [Script Info]部分的说明</h3><table>
+<thead>
+<tr>
+<th>标题行</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>;</td>
+<td>分号, 后面可以跟任何内容. 这一行是说明性文字, 加载字幕时不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Title</td>
+<td>标题, 如果没有提供, 则自动使用&lt;untitled&gt;, 是对字幕的描述</td>
+<td></td>
+</tr>
+<tr>
+<td>Original Script</td>
+<td>(可选)最初创建字幕的人,若没有提供则自动使用&lt;unknown&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>Original Translation</td>
+<td>(可选) 最初翻译对话的人, 若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Original Editing</td>
+<td>(可选) 最初的编辑者, 一般是所有参与翻译和校对等工作的人,若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Original Timing</td>
+<td>(可选)原剧本的时间轴人员, 若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Synch Point</td>
+<td>(可选)从哪个时间点开始加载字幕, 若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Script Updated By</td>
+<td>(可选)对原剧本的修改/更新人员, 若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Update Details</td>
+<td>更新的具体信息, 若没有提供则该行不显示</td>
+<td></td>
+</tr>
+<tr>
+<td>Script Type</td>
+<td>SSA的版本信息,ASS的版本为”v4.00+”</td>
+<td></td>
+</tr>
+<tr>
+<td>Collisions</td>
+<td>当字幕时间重叠时, 前后字幕的堆叠方式.值为”Normal”时, 后一条字幕出现在前一条字幕的上方.如果值为”Reverse”时, 前一条字幕往上移动给后一条字幕让位.</td>
+<td></td>
+</tr>
+<tr>
+<td>PlayResY</td>
+<td>文件所使用的视频高度参考标准,如果使用Directdraw回放SSA v4会自动选择最相近的启用的设置</td>
+<td></td>
+</tr>
+<tr>
+<td>PlayResX</td>
+<td>文件所使用的视频宽度参考标准, 如果使用Directdraw回放SSA v4会自动选择最相近的启用的设置.</td>
+<td></td>
+</tr>
+<tr>
+<td>注</td>
+<td>如果只提供了PlayResX, PlayResY其中一种,那另一种会按实际视频的像素值为准.提供的分辨率数值影响以下参数:<br>1) 所有给出的坐标(到边缘的距离<br>\pos, \move, 矢量绘图等)都以此分辨率作为参照.<br>2) 所有的文字字号均按照此分辨率等比例放大缩小<br> 3) 当ScaledBorderAndShadow被启用时, 所有边框宽度和阴影深度都按照此分辨率与实际分辨率的比例等比例缩放<br>4) 这个分辨率不影响最终显示文字的宽高比, 但影响矢量绘画图形的宽高比.</td>
+<td></td>
+</tr>
+<tr>
+<td>PlayDepth</td>
+<td>加载字幕时使用的色深(颜色的数目), 如果使用Directdraw回放SSA v4会自动选择最相近的启用的设置</td>
+<td></td>
+</tr>
+<tr>
+<td>Timer</td>
+<td>字幕加载的速度调整, 数值为百分数. 例如”100.0000”代表100%. 其数值有4位小数点.</td>
+<td></td>
+</tr>
+<tr>
+<td>WrapStyle</td>
+<td>定义默认的换行方式,</td>
+<td></td>
+</tr>
+<tr>
+<td>注</td>
+<td>0: 智能换行, 行分得较平均, 上面的行较长<br>1: 一行结束后从行尾的词分行<br>2: 不换行. 此模式下只有\n, \N才换行<br>3: 与模式0相同, 但下面的行分得比较长</td>
+<td></td>
+</tr>
+<tr>
+<td>ScaledBorderAndShadow</td>
+<td>指定边框宽度与阴影深度是否随着视频分辨率等比例缩放. 可为Yes, No. 默认为No.<br>当取值为No时, 边框宽度与阴影深度完全按照指定的像素数显示.<br>当取值为Yes时, 边框宽度与阴影深度随着实际视频的分辨率同等比例缩放.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-v4-Styles-部分的说明"><a href="#2-v4-Styles-部分的说明" class="headerlink" title="2. [v4+ Styles]部分的说明"></a>2. [v4+ Styles]部分的说明</h3><p>Style定义了字幕的样式和位置. 所有的Style都在单独的Style里进行定义.<br>除了阴影/边框的类型和深度, 其余所有的风格设置都可以由字幕文本中的覆写代码所替代.<br>在定义风格之前先要有一行”Format:”来定义风格中每一个字段所代表的含义, 这些字段名称必须拼写准确, 顺序可以打乱, 字段名表示如下:</p>
+<p>Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColor, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding</p>
+<table>
+<thead>
+<tr>
+<th>标题行</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Name. 风格(Style)的名称. 区分大小写. 不能包含逗号.</td>
+<td></td>
+</tr>
+<tr>
+<td>Fontname</td>
+<td>Fontname. 使用的字体名称, 区分大小写.</td>
+<td></td>
+</tr>
+<tr>
+<td>Fontsize</td>
+<td>Fontsize. 字体的字号</td>
+<td></td>
+</tr>
+<tr>
+<td>PrimaryColour</td>
+<td>设置主要颜色, 为蓝-绿-红三色的十六进制代码相排列, &amp;HAABBGGRR. 为字幕填充颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>SecondaryColour</td>
+<td>设置次要颜色, 为蓝-绿-红三色的十六进制代码相排列, &amp;HAABBGGRR. 在卡拉OK效果(ass已经废弃不用)中由次要颜色变为主要颜色.</td>
+<td></td>
+</tr>
+<tr>
+<td>OutlineColor</td>
+<td>设置轮廓颜色, 为蓝-绿-红三色的十六进制代码相排列, &amp;HAABBGGRR.</td>
+<td></td>
+</tr>
+<tr>
+<td>BackColour</td>
+<td>设置阴影颜色, 为蓝-绿-红三色的十六进制代码相排列, &amp;HAABBGGRR.</td>
+<td></td>
+</tr>
+<tr>
+<td>注</td>
+<td>ASS的PrimaryColour，SecondaryColour，OutlineColor，BackColour字段还包含了alpha通道信息. (AABBGGRR), 注ASS的颜色代码要在前面加上&amp;H</td>
+<td></td>
+</tr>
+<tr>
+<td>Bold</td>
+<td>-1为粗体, 0为常规</td>
+<td></td>
+</tr>
+<tr>
+<td>Italic</td>
+<td>-1为斜体, 0为常规</td>
+<td></td>
+</tr>
+<tr>
+<td>Underline</td>
+<td>-1为下划线，0为常规</td>
+<td></td>
+</tr>
+<tr>
+<td>Strikeout</td>
+<td>-1为中划线/删除线，0为常规</td>
+<td></td>
+</tr>
+<tr>
+<td>ScaleX</td>
+<td>修改文字的宽度. 为百分数</td>
+<td></td>
+</tr>
+<tr>
+<td>ScaleY</td>
+<td>修改文字的高度. 为百分数</td>
+<td></td>
+</tr>
+<tr>
+<td>Spacing</td>
+<td>文字间的额外间隙. 为像素数</td>
+<td></td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>按Z轴进行旋转的度数, 原点由alignment进行了定义. 可以为小数</td>
+<td></td>
+</tr>
+<tr>
+<td>BorderStyle</td>
+<td>1为边框+阴影, 3为纯色背景. 当值为3时, 文字下方为轮廓颜色的背景, 最下方为阴影颜色背景.</td>
+<td></td>
+</tr>
+<tr>
+<td>Outline</td>
+<td>当BorderStyle为1时, 该值定义文字轮廓宽度, 为像素数, 常见有0, 1, 2, 3, 4</td>
+<td></td>
+</tr>
+<tr>
+<td>Shadow</td>
+<td>当BorderStyle为1时, 该值定义阴影的深度, 为像素数, 常见有0, 1, 2, 3, 4</td>
+<td></td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>定义字幕的位置. 字幕的位置与小键盘数字对应的位置相同.</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginL</td>
+<td>字幕可出现区域与左边缘的距离, 为像素数</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginR</td>
+<td>字幕可出现区域与右边缘的距离, 为像素数</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginV</td>
+<td>垂直距离</td>
+<td></td>
+</tr>
+<tr>
+<td>注</td>
+<td>对于处在下方的字幕, 此值是字幕到底端的像素数<br>对于处在屏幕上方的字幕, 此值为字幕到顶端的像素数.<br>对于处在屏幕中间的字幕, 此值被忽略.</td>
+<td></td>
+</tr>
+<tr>
+<td>Encoding</td>
+<td>指明字体的字符集或编码方式. 如0为英文, 134为简体中文, 136为繁体中文. 当文件为非UNICODE类型编码时, 该值对字幕的显示起作用</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-Events-部分的Dialogue的说明"><a href="#3-Events-部分的Dialogue的说明" class="headerlink" title="3. [Events]部分的Dialogue的说明"></a>3. [Events]部分的Dialogue的说明</h3><p>Dialogue类型的行(对话行)包括字幕对白, 时间轴信息, 以及对白的显示方式.<br>在对话行出现前必须有一条格式行Format: 来对逗号分隔的每个字段进行定义, 该格式行中的每一个字段必须拼写准确, 内容如下:</p>
+<p>Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text</p>
+<p>最后的一个字段永远都是对白文字的字段, 因此可以包含逗号. 前面的字段顺序可以改变.</p>
+<table>
+<thead>
+<tr>
+<th>标题行</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Layer</td>
+<td>ASS的这个字段名是Layer(图层), 可以为任意的整数. 图层不同的两条位置/时间有重叠的字幕不被视为有冲突, 图层号码大的字幕显示在图层号小的上方.</td>
+<td></td>
+</tr>
+<tr>
+<td>Start</td>
+<td>事件开始的时间, 格式为0:00:00:00(时:分:秒:百分数), 注意小时只有一位数</td>
+<td></td>
+</tr>
+<tr>
+<td>End</td>
+<td>事件结束的时间. 格式为0:00:00:00(时:分:秒:百分数), 注意小时只有一位数</td>
+<td></td>
+</tr>
+<tr>
+<td>Style</td>
+<td>该条字幕所使用的风格. 风格的具体信息在[V4+ Style]这一部分中进行定义</td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>角色名, 指出对白是由影片中哪位演员所说的. 字幕加载时不显示, 只为了编写时理解方便.</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginL</td>
+<td>使用新的与左边缘的距离, 为4位数字代表的像素值. 0000代表使用当前Style定义的值.</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginR</td>
+<td>使用新的与右边缘的距离, 为4位数字代表的像素值. 0000代表使用当前Style定义的值.</td>
+<td></td>
+</tr>
+<tr>
+<td>MarginV</td>
+<td>使用新的垂直距离, 为4位数字代表的像素值. 0000代表使用当前Style定义的值. 具体说明参见上面[v4+ Style]里的说明</td>
+<td></td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>过渡效果. 可以为空值</td>
+<td></td>
+</tr>
+<tr>
+<td>Text</td>
+<td>为对白字幕区域, 是最终出现在屏幕上的字幕.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="四、ass文件中常见的转义符"><a href="#四、ass文件中常见的转义符" class="headerlink" title="四、ass文件中常见的转义符"></a>四、ass文件中常见的转义符</h2><table>
+<thead>
+<tr>
+<th>转义符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>软性分行(回车), 只在分行模式(WrapStyle)为2时有效. 在其它分行模式下相当于一个空格</td>
+<td></td>
+</tr>
+<tr>
+<td>\N</td>
+<td>硬性分行(回车), 在任何分行模式下都有效</td>
+<td></td>
+</tr>
+<tr>
+<td>\h</td>
+<td>硬性空格. 它保证显示字幕时不会在它的这个空格上分行(保证左右两个词在同一行)</td>
+<td></td>
+</tr>
+<tr>
+<td>\b&lt;0 或 1&gt;</td>
+<td>\b1令文字变为粗体. \b0强制文字不是粗体(bold)</td>
+<td></td>
+</tr>
+<tr>
+<td>\i&lt;0 或 1&gt;</td>
+<td>\i1令文字变为斜体. \i0强制文字不是斜体(italic)</td>
+<td></td>
+</tr>
+<tr>
+<td>\u&lt;0 或 1&gt;</td>
+<td>下划线(underline)开关</td>
+<td></td>
+</tr>
+<tr>
+<td>\s&lt;0 或 1&gt;</td>
+<td>中划线(删除线)开关(strikeout)</td>
+<td></td>
+</tr>
+<tr>
+<td>\bord&lt;宽度&gt;</td>
+<td>指定边框宽度(border), 像素数. 可以为小数</td>
+<td></td>
+</tr>
+<tr>
+<td>\shad&lt;深度&gt;</td>
+<td>指定阴影深度(shadow), 不能为负数</td>
+<td></td>
+</tr>
+<tr>
+<td>\be&lt;0 或 1&gt;</td>
+<td>模糊边缘blur edges</td>
+<td></td>
+</tr>
+<tr>
+<td>\fn&lt;字体名称&gt;</td>
+<td>指定使用系统中已安装的字体, 区分大小写. 如果使用的字体没有安装, 则会用Arial来替代(font name).</td>
+<td></td>
+</tr>
+<tr>
+<td>\fs&lt;字号&gt;</td>
+<td>指定文字的大小, &lt;字号&gt;是一个指代高度的像素值, 只能用整数. (font size)</td>
+<td></td>
+</tr>
+<tr>
+<td>\fsc&lt;x 或 y&gt;&lt;百分数&gt;</td>
+<td>缩放文字大小. &lt;x 或 y&gt;指定文字是横向还是纵向缩放. &lt;百分数&gt;指定调整到百分之多少. 同样适用于矢量图形.</td>
+<td></td>
+</tr>
+<tr>
+<td>\fsp&lt;像素值&gt;</td>
+<td>文字间增加额外的间隔(font spacing), 默认为0</td>
+<td></td>
+</tr>
+<tr>
+<td>\fr[&lt;x/y/z&gt;]&lt;度数&gt;</td>
+<td>文字旋转一定的度数(font rotation)</td>
+<td></td>
+</tr>
+<tr>
+<td>\move(&lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;[, &lt;时值1&gt;, &lt;时值2&gt;])</td>
+<td>提供从一个位置到另一个位置的移动动态效果.只能够匀速移动, 不能够加速移动</td>
+<td></td>
+</tr>
+<tr>
+<td>\org(&lt;x&gt;, &lt;y&gt;)</td>
+<td>设置旋转的原点坐标(origin), 它影响一行中所有的旋转</td>
+<td></td>
+</tr>
+<tr>
+<td>\fad(&lt;淡入时间&gt;,&lt;淡出时间&gt;)</td>
+<td>提供简单的淡入淡出效果. &lt;淡入时间&gt;与&lt;淡出时间&gt;之和不能超过该行的时间长度.</td>
+<td></td>
+</tr>
+<tr>
+<td>\fade(&lt;a1&gt;,&lt;a2&gt;,&lt;a3&gt;,&lt;时值1&gt;,&lt;时值2&gt;,&lt;时值3&gt;,&lt;时值4&gt;)</td>
+<td>提供复杂的透明度变化效果. &lt;a1&gt;,&lt;a2&gt;,&lt;a3&gt;为三个不同的透明度值(alpha), 取值从0到255. 0全见,255全透明</td>
+<td></td>
+</tr>
+<tr>
+<td>\c&amp;H&lt;bbggrr&gt;&amp;</td>
+<td>指定文字的颜色(color). &lt;bbggrr&gt;是一个十六进制的RGB数值, 但颜色顺序相反(蓝-绿-红).</td>
+<td></td>
+</tr>
+<tr>
+<td>\alpha&amp;H&lt;aa&gt;&amp;</td>
+<td>设定文字的透明度(alpha). &lt;aa&gt;是一个十六进制数值. 00为全见, FF为全透明</td>
+<td></td>
+</tr>
+<tr>
+<td>\an&lt;位置&gt;</td>
+<td>&lt;位置&gt;是一个数字代码, 用来代表字幕出现在屏幕中的位置(alignment)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>今晚我是你的人（逃<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Test</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ass</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/essay/" class="article-tag-list-link color3">随笔</a>
+        			<a href="/categories/CS/" class="article-tag-list-link color3">CS</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://shilela.github.io/2019/md/assintro.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/md/NeteaseMusicDownloader.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">下载网易云音乐中的音乐</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/md/test2.html" class="archive-article-date">
-  	<time datetime="2017-08-26T10:32:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-26</time>
-</a>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、ass文件简介"><span class="toc-number">1.</span> <span class="toc-text">一、ass文件简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、ass文件结构"><span class="toc-number">2.</span> <span class="toc-text">二、ass文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Script-Info"><span class="toc-number">2.1.</span> <span class="toc-text">1. [Script Info]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v4-Styles"><span class="toc-number">2.2.</span> <span class="toc-text">2. [v4 Styles]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Events"><span class="toc-number">2.3.</span> <span class="toc-text">3. [Events]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Fonts"><span class="toc-number">2.4.</span> <span class="toc-text">4. [Fonts]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、各部分说明"><span class="toc-number">3.</span> <span class="toc-text">三、各部分说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Script-Info-部分的说明"><span class="toc-number">3.1.</span> <span class="toc-text">1. [Script Info]部分的说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-v4-Styles-部分的说明"><span class="toc-number">3.2.</span> <span class="toc-text">2. [v4+ Styles]部分的说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Events-部分的Dialogue的说明"><span class="toc-number">3.3.</span> <span class="toc-text">3. [Events]部分的Dialogue的说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、ass文件中常见的转义符"><span class="toc-number">4.</span> <span class="toc-text">四、ass文件中常见的转义符</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/md/test2.html">Test 2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Test</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Test/" class="article-tag-list-link color5">Test</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/md/test1.html" class="archive-article-date">
-  	<time datetime="2017-08-17T14:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/md/test1.html">Test 1</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Test</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Test/" class="article-tag-list-link color5">Test</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
+  
+
+  
+
+  
+
+  
+    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+        var gitalk = new Gitalk({
+        clientID: '5fc6c014c67949f30455',
+        clientSecret: 'fa33463f650e8bdf073efc7b83653067beadfce8',
+        repo: 'shilela.github.io',
+        owner: 'shilela',
+        admin: ['shilela'],
+        id: 'Sat Oct 26 2019 21:19:15 GMT+0800',
+        pagerDirection: 'first',
+        distractionFreeMode: ''
+})
+gitalk.render('gitalk-container')
+}
+</script>
+  
     
 
 
@@ -365,9 +850,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
